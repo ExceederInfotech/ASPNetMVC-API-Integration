@@ -12,7 +12,6 @@ namespace EventManagementApp.Controllers
         public EventsController(IConfiguration configuration)
         {
             _config = configuration;
-
             _client = new HttpClient();
             string baseAdd = _config.GetValue<string>("Settings:baseAddress");
             Uri baseAddress = new Uri(baseAdd);
